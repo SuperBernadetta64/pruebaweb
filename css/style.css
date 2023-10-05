@@ -1,17 +1,14 @@
 :root {
-    --primario: #ff0911;
-    --primarioOscuro: #df0a11;
-    --secundario: #3b0307;
-    --boton: #dd083d;
-    --secundarioOscuro: #595cf0;
-    --blanco: #ffffff;
-    --negro: #000000;
-    --aqua: rgb(255, 111, 111);
-    --asul: rgb(155, 15, 15);
+    --primario: #1f8bca;
+    --primarioOscuro: #0a5079;
+    --secundario: #b61616;
+    --secundarioOscuro: rgb(233, 287, 2);
+    --blanco: #FFF;
+    --negro: #000;
+    --aqua: rgb(19, 218, 184);
+    --asul: rgb(10, 41, 179);
 
-    /* --fuentePrincipal: 'Staatliches', cursive;*/
-   --fuentePrincipal: 'Montserrat', sans-serif;
-    
+    --fuentePrincipal: 'Staatliches', cursive;
 }
 
 html{
@@ -44,7 +41,7 @@ html{
 
 /* Globales */
 body{
-    background-color: #f7ecec;
+    background-color: var(--primario);
     font-size: 1.6rem;
     line-height: 1.5;
 }
@@ -52,7 +49,7 @@ body{
 p {
     font-size: 1.8rem;
     font-family: Arial, Helvetica, sans-serif;
-    color: var(--negro);
+    color: var(--blanco);
 }
 
 a {
@@ -121,14 +118,10 @@ h3 { font-family: 2.4rem; }
 /*Navegacion*/
 .navegacion {
     background-color: var(--primarioOscuro);
-    padding: 1rem;
+    padding: 1rem 0;
     display: flex;
-    justify-content: space-evenly;
-    gap: 5rem;
-    flex-wrap: wrap;
-    flex-direction: row;
-    align-items: center;
-    
+    justify-content: center;
+    gap: 2rem; /*Seperacion forma nueva*/
 }
 
 .navegacion__enlace{
@@ -205,15 +198,15 @@ h3 { font-family: 2.4rem; }
 
 .grafico--juego{
     grid-row: 2 / 3;
-    background-image: url(../img/zero2.jpg);
+    background-image: url(../img/grafico1.jpg);
 }
 .grafico--inicio{
     grid-row: 2 / 3;
-    background-image: url(../img/zero1.jpg);
+    background-image: url(../img/icono_inicio.jpg);
 }
 
 .grafico--node {
-    background-image: url(../img/zero2.jpg);
+    background-image: url(../img/grafico2.gif);
     grid-row: 8 / 9;
 }
 
@@ -270,21 +263,20 @@ h3 { font-family: 2.4rem; }
     margin: 0;
 }
 
-/*Pagina del producto*/
+/*Pagian del producto*/
 
 @media (min-width: 768px) { 
-    .productos {
-       display: grid;
-       grid-template-columns: repeat(2, 1fr);
-       column-gap: 2rem;
-    }
- }
+   .juego {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      column-gap: 2rem;
+   }
+}
 
 .formulario {
     display: grid;
     grid-template-columns: repeat(2, 1rf);
     gap: 2rem;
-    justify-items: center;
 }
 
 .formulario__campo {
@@ -303,7 +295,7 @@ h3 { font-family: 2.4rem; }
 }
 
 .formulario__submit {
-    background-color: var(--boton);
+    background-color: var(--secundario);
     border: none;
     font-size: 2rem;
     font-family: var(--fuentePrincipal);
@@ -409,21 +401,5 @@ h3 { font-family: 2.4rem; }
 
 .footer {
     text-align: center;
-}
-
-.content-page section{
-	display: flex;
-	background: #fff;
-}
-
-.content-page section{
-    display: block;
-}
-
-.title-section{
-	padding: 10px 0; 
-	font-size: 20px;
-	color: rgb(0, 1, 17);
-	font-family: 'Sen', sans-serif;
 }
 
